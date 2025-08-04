@@ -1,0 +1,39 @@
+api_version: 3
+name: study_fl
+description: NVIDIA FLARE for FL
+
+participants:
+  - name: 192.168.181.150
+    type: server
+    org: study_fl
+    fed_learn_port: 8002
+    admin_port: 8003
+
+  - name: site-1
+    type: client
+    org: nvidia
+
+  - name: freedino@uet.com
+    type: admin
+    org: study_fl
+    role: project_admin
+
+builders:
+  - path: nvflare.lighter.impl.workspace.WorkspaceBuilder
+    args:
+      template_file:
+        - master_template.yml
+        - aws_template.yml
+        - azure_template.yml
+  - path: nvflare.lighter.impl.static_file.StaticFileBuilder
+    args:
+      config_folder: config
+      overseer_agent:
+        path: nvflare.ha.dummy_overseer_agent.DummyOverseerAgent
+        overseer_exist: false
+        args:
+          sp_end_point: 192.168.181.150:8002:8003
+
+  - path: nvflare.lighter.impl.cert.CertBuilder
+  - path: nvflare.lighter.impl.signature.SignatureBuilder
+

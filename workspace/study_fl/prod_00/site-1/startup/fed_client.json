@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "servers": [
+    {
+      "name": "study_fl",
+      "service": {
+        "scheme": "grpc"
+      },
+      "identity": "192.168.181.150"
+    }
+  ],
+  "client": {
+    "ssl_private_key": "client.key",
+    "ssl_cert": "client.crt",
+    "ssl_root_cert": "rootCA.pem",
+    "fqsn": "site-1",
+    "is_leaf": true
+  },
+  "overseer_agent": {
+    "path": "nvflare.ha.dummy_overseer_agent.DummyOverseerAgent",
+    "overseer_exist": false,
+    "args": {
+      "role": "client",
+      "overseer_end_point": "",
+      "project": "study_fl",
+      "name": "site-1"
+    }
+  }
+}
