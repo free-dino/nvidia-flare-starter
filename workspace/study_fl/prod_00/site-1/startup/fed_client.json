@@ -20,7 +20,6 @@
     "path": "nvflare.ha.dummy_overseer_agent.DummyOverseerAgent",
     "overseer_exist": false,
     "args": {
-      "role": "client",
       "overseer_end_point": "",
       "project": "study_fl",
       "name": "site-1"

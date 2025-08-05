@@ -15,10 +15,7 @@
       "path": "nvflare.ha.dummy_overseer_agent.DummyOverseerAgent",
       "overseer_exist": false,
       "args": {
-        "role": "admin",
-        "overseer_end_point": "",
-        "project": "study_fl",
-        "name": "freedino@uet.com"
+				"sp_end_point": "192.168.181.150:8002:8003"
       }
     }
   }

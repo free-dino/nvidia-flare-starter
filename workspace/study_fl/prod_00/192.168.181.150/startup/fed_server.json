@@ -18,7 +18,6 @@
     "path": "nvflare.ha.dummy_overseer_agent.DummyOverseerAgent",
     "overseer_exist": false,
     "args": {
-      "role": "server",
       "overseer_end_point": "",
       "project": "study_fl",
       "name": "192.168.181.150",
